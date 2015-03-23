@@ -1,0 +1,17 @@
+#!/usr/bin/perl
+
+$| = 1;
+
+print <<EOS;
+Content-Type: text/plain
+
+This file needs to be hard-linked into .../publisher/war/x!
+EOS
+
+for ( my $i = 0; $i < 3; ++$i ) {
+   print "$i at " . localtime( time() ) . "\n";
+   sleep( 1 );
+}
+
+exit( 0 );
+

@@ -1,0 +1,7 @@
+#!/usr/bin/perl
+print <<EOS;
+Content-Type: text/plain
+
+This file needs to be hard-linked into .../publisher/war/x!
+EOS
+
