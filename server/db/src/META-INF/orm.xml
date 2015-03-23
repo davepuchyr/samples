@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings version="2.0"
+	xmlns="http://java.sun.com/xml/ns/persistence/orm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_2_0.xsd">
+	<persistence-unit-metadata>
+		<persistence-unit-defaults>
+			<schema>CORE</schema>
+		</persistence-unit-defaults>
+	</persistence-unit-metadata>
+	
+	<!-- any non-core entities/tables go here -->
+   <entity class="com.buyside.db.pnl.Action">
+      <table name="ACTIONS" schema="PNL" />
+   </entity>
+   <entity class="com.buyside.db.pnl.ExecType">
+      <table name="EXEC_TYPES" schema="PNL" />
+   </entity>
+   <entity class="com.buyside.db.pnl.Market">
+      <table name="MARKETS" schema="PNL" />
+   </entity>
+   <entity class="com.buyside.db.pnl.Position">
+      <table name="POSITIONS" schema="PNL" />
+   </entity>
+   <entity class="com.buyside.db.pnl.ReportType">
+      <table name="REPORT_TYPES" schema="PNL" />
+   </entity>
+   <entity class="com.buyside.db.pnl.TradeMit">
+      <table name="TRADES_MIT" schema="PNL" />
+   </entity>
+   <entity class="com.buyside.db.pnl.TradeType">
+      <table name="TRADE_TYPES" schema="PNL" />
+   </entity>
+</entity-mappings>

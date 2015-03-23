@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0"
+   xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+
+   <persistence-unit name="domain" transaction-type="RESOURCE_LOCAL">
+      <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+        
+      <!-- http://stackoverflow.com/questions/5855872/cross-database-joins-in-jpa -->
+      <mapping-file>META-INF/orm.xml</mapping-file>
+
+      <class>com.buyside.db.core.Account</class>
+      <class>com.buyside.db.core.AuctionDay</class>
+      <class>com.buyside.db.core.Close</class>
+      <class>com.buyside.db.core.CloseType</class>
+      <class>com.buyside.db.core.Counterparty</class>
+      <class>com.buyside.db.core.Currency</class>
+      <class>com.buyside.db.core.Firm</class>
+      <class>com.buyside.db.core.Holiday</class>
+      <class>com.buyside.db.core.Instrument</class>
+      <class>com.buyside.db.core.Role</class>
+      <class>com.buyside.db.core.RoleType</class>
+      <class>com.buyside.db.core.User</class>
+      <class>com.buyside.db.core.UsfIRP</class>
+      <class>com.buyside.db.core.UsfMacro</class>
+      <class>com.buyside.db.core.UstBill</class>
+      <class>com.buyside.db.core.UstBond</class>
+      <class>com.buyside.db.core.Vector</class>
+      
+      <properties>
+         <property name="eclipselink.query-results-cache" value="false"/>
+      </properties>
+   </persistence-unit>
+</persistence>
