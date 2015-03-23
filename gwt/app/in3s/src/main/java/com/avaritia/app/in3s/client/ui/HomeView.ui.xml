@@ -1,0 +1,46 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder
+    xmlns:ui="urn:ui:com.google.gwt.uibinder"
+    xmlns:g="urn:import:com.google.gwt.user.client.ui"
+    xmlns:mgwt="urn:import:com.googlecode.mgwt.ui.client.widget"
+    xmlns:alu="urn:import:com.avaritia.lib.ui.client"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+ >
+   <ui:with field="font" type="com.avaritia.lib.font.awesome.client.FontAwesomeBundle" />
+   <mgwt:panel.flex.RootFlexPanel>
+      <mgwt:panel.Panel>
+         <g:HTMLPanel ui:field="svgWrapper" styleName="height100percent">
+            <svg>
+               <filter id="bevel" filterUnits="userSpaceOnUse">
+                  <feGaussianBlur in="SourceAlpha" stdDeviation="5" result="blur" />
+                  <feOffset in="blur" dx="4" dy="4" result="offsetBlur" />
+                  <feSpecularLighting surfaceScale="5" specularConstant=".75" specularExponent="20"
+                     lighting-color="white" in="blur" result="highlight">
+                     <fePointLight x="-5000" y="-10000" z="20000" />
+                  </feSpecularLighting>
+                  <feComposite in="highlight" in2="SourceAlpha" operator="in" result="highlight" />
+                  <feComposite in="SourceGraphic" in2="highlight" operator="arithmetic" k1="0" k2="1" k3="1" k4="0"
+                     result="highlightText" />
+                  <feMerge>
+                     <!-- add shadow <feMergeNode in="offsetBlur"/> -->
+                     <feMergeNode in="highlightText" />
+                  </feMerge>
+               </filter>
+               <g filter="url(#bevel)">
+                  <text id="super3" x="0" y="0" style="font-family:mishmash; dominant-baseline:ideographic; text-anchor:start;">3</text>
+
+                  <text id="ins" x="0" y="0" style="font-family:mishmash; dominant-baseline:hanging; text-anchor:middle;">ins</text>
+               </g>
+            </svg>
+            <div id="navigation" class="buttons">
+               <a id="help">
+                  <span class="{font.fa.fa} {font.fa.question} {font.fa.large}"></span>
+               </a>
+               <a id="forward">
+                  <span class="{font.fa.fa} {font.fa.arrowRight} {font.fa.large}"></span>
+               </a>
+            </div>
+         </g:HTMLPanel>
+      </mgwt:panel.Panel>
+   </mgwt:panel.flex.RootFlexPanel>
+</ui:UiBinder>

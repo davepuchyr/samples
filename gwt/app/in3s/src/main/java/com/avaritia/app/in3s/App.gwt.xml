@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- When updating your version of GWT, you should also update this DTD reference, 
+   so that your app can take advantage of the latest GWT module capabilities. -->
+<!DOCTYPE module PUBLIC "-//Google Inc.//DTD Google Web Toolkit 2.6.1//EN" "https://gwt.googlesource.com/gwt/+/2.6.1/distro-source/core/src/gwt-module.dtd">   
+<module rename-to="in3s"><!-- NOTE: a window.rename-to object is created by gwt -->
+   <!-- Inherit the core Web Toolkit stuff. -->
+   <inherits name="com.google.gwt.activity.Activity" />
+   <inherits name="com.google.gwt.place.Place" />
+   <inherits name="com.google.gwt.user.User" />
+   <inherits name="com.google.gwt.user.UserAgent" />
+   <inherits name="com.google.gwt.logging.Logging" />
+   <inherits name="com.google.gwt.inject.Inject"/>
+
+   <!-- Other module inherits -->
+   <inherits name="com.avaritia.lib.activity.Activity" />
+   <inherits name="com.avaritia.lib.console.Console" />
+   <inherits name="com.avaritia.lib.font.awesome.FontAwesomeBundle" />
+   <inherits name="com.avaritia.lib.font.mishmash.FontMishmashBundle" />
+   <inherits name="com.avaritia.lib.injector.Injector" />
+   <inherits name="com.avaritia.lib.java.fsm.FiniteStateMachine" />
+   <inherits name="com.avaritia.lib.js.d3.D3Bundle" />
+   <inherits name="com.avaritia.lib.place.Place" />
+   <inherits name="com.avaritia.lib.provider.Provider" />
+   <inherits name="com.avaritia.lib.ui.UI" />
+   <inherits name="com.googlecode.gwtphonegap.PhoneGap" />
+   <inherits name="com.googlecode.mgwt.MGWT" />
+   <inherits name="com.google.common.base.Base"/><!-- guava-gwt; there are others list collect.Collect -->
+   <!--
+   <inherits name="org.scribe.Scribe" />
+   -->
+
+   <!-- hack to deal with AnimationActivityManager bug in IE and FF -->
+   <replace-with class="com.avaritia.app.in3s.client.AnimationMapperNull">
+      <when-type-is class="com.avaritia.app.in3s.client.AnimationMapper" />
+      <any>
+         <when-property-is name="user.agent" value="gecko1_8" />
+         <when-property-is name="user.agent" value="ie9" />
+         <when-property-is name="user.agent" value="ie10" />
+      </any>
+   </replace-with>
+
+   <!-- Logging -->
+   <set-property name="gwt.logging.enabled" value="TRUE" />
+   <set-property name="gwt.logging.logLevel" value="SEVERE" />
+   <set-property name="gwt.logging.consoleHandler" value="ENABLED" />
+   <set-property name="gwt.logging.developmentModeHandler" value="ENABLED" />
+   <set-property name="gwt.logging.firebugHandler" value="ENABLED" />
+   <set-property name="gwt.logging.hasWidgetsHandler" value="DISABLED" />
+   <set-property name="gwt.logging.popupHandler" value="DISABLED" />
+   <set-property name="gwt.logging.systemHandler" value="ENABLED" />
+   <!-- <set-property name="gwt.logging.simpleRemoteHandler" value="ENABLED" /> -->
+
+   <!-- Enable this css hack: https://groups.google.com/d/msg/mgwt/89APPrGuKe8/7ooFOEmp9PoJ -->
+   <set-configuration-property name="mgwt.css" value="pretty" />
+
+   <!-- Any point in using a value other than xhigh? -->
+   <set-property name="mgwt.density" value="xhigh" />
+
+   <!-- Specify the app entry point class -->
+   <entry-point class="com.avaritia.app.in3s.client.EntryPoint" />
+
+   <!-- Use Jsni by default -->
+   <generate-with class="com.avaritia.app.in3s.rebind.AppBundleGenerator">
+      <when-type-assignable class="com.avaritia.app.in3s.client.AppBundleImplJsni.AppJsSourceBundle" />
+   </generate-with>
+
+   <replace-with class="com.avaritia.app.in3s.client.AppBundleImplJsni">
+      <when-type-is class="com.avaritia.app.in3s.client.AppBundle" />
+   </replace-with>
+
+   <!-- Specify the paths for translatable code -->
+   <source path="client" />
+   <source path="shared" />
+</module>
+

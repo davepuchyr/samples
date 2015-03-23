@@ -1,0 +1,42 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder
+    xmlns:ui="urn:ui:com.google.gwt.uibinder"
+    xmlns:g="urn:import:com.google.gwt.user.client.ui"
+    xmlns:mgwt="urn:import:com.googlecode.mgwt.ui.client.widget"
+    xmlns:alu="urn:import:com.avaritia.lib.ui.client"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+ >
+   <ui:with field="font" type="com.avaritia.lib.font.awesome.client.FontAwesomeBundle" />
+
+   <mgwt:panel.flex.RootFlexPanel>
+      <mgwt:panel.Panel>
+         <g:HTMLPanel ui:field="svgWrapper" styleName="height100percent">
+            <div class="centered">
+               <div>
+                  <span class="phoneGapLabel">Altitude :&nbsp;</span><g:InlineLabel ui:field="altitude" styleName="phoneGapValue"></g:InlineLabel>
+               </div>
+               <div>
+                  <span class="phoneGapLabel">Latitude :&nbsp;</span><g:InlineLabel ui:field="latitude" styleName="phoneGapValue"></g:InlineLabel>
+               </div>
+               <div>
+                  <span class="phoneGapLabel">Longitude :&nbsp;</span><g:InlineLabel ui:field="longitude" styleName="phoneGapValue"></g:InlineLabel>
+               </div>
+
+               <mgwt:button.Button ui:field="toggleGPS">Start</mgwt:button.Button>
+            </div>
+
+            <div id="navigation" class="buttons">
+               <a id="back">
+                  <span class="{font.fa.fa} {font.fa.arrowLeft} {font.fa.large}"></span>
+               </a>
+               <a id="help">
+                  <span class="{font.fa.fa} {font.fa.question} {font.fa.large}"></span>
+               </a>
+               <a id="forward">
+                  <span class="{font.fa.fa} {font.fa.arrowRight} {font.fa.large}"></span>
+               </a>
+            </div>
+         </g:HTMLPanel>
+      </mgwt:panel.Panel>
+   </mgwt:panel.flex.RootFlexPanel>
+</ui:UiBinder>

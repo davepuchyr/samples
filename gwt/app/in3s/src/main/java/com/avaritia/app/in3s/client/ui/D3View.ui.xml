@@ -1,0 +1,64 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder
+    xmlns:ui="urn:ui:com.google.gwt.uibinder"
+    xmlns:g="urn:import:com.google.gwt.user.client.ui"
+    xmlns:mgwt="urn:import:com.googlecode.mgwt.ui.client.widget"
+    xmlns:alu="urn:import:com.avaritia.lib.ui.client"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+ >
+   <ui:with field="font" type="com.avaritia.lib.font.awesome.client.FontAwesomeBundle" />
+   <ui:with field="zcss" type="com.avaritia.app.in3s.client.AppCssBundle" />
+
+   <mgwt:panel.flex.RootFlexPanel>
+      <mgwt:panel.Panel>
+         <g:HTMLPanel ui:field="svgWrapper" styleName="height100percent">
+            <svg>
+               <g provider="facebook">
+                  <text x="0" y="0" class="{font.fa.fa} {font.fa.scale5x} {zcss.css.buttonZingable} {zcss.css.backgroundFacebook}">&#xf111;</text>
+                  <text x="0" y="0" class="{font.fa.fa} {font.fa.scale3x} {zcss.css.buttonZingable}">&#xf09a;</text>
+               </g>
+               <g provider="google">
+                  <text x="0" y="0" class="{font.fa.fa} {font.fa.scale5x} {zcss.css.buttonZingable} {zcss.css.backgroundGoogle}">&#xf111;</text>
+                  <text x="0" y="0" class="{font.fa.fa} {font.fa.scale3x} {zcss.css.buttonZingable}">&#xf0d5;</text>
+               </g>
+               <g provider="linkedin">
+                  <text x="0" y="0" class="{font.fa.fa} {font.fa.scale5x} {zcss.css.buttonZingable} {zcss.css.backgroundLinkedIn}">&#xf111;</text>
+                  <text x="0" y="0" class="{font.fa.fa} {font.fa.scale3x} {zcss.css.buttonZingable}">&#xf0e1;</text>
+               </g>
+               <g provider="mail">
+                  <text x="0" y="0" class="{font.fa.fa} {font.fa.scale5x} {zcss.css.buttonZingable} {zcss.css.backgroundMail}">&#xf111;</text>
+                  <text x="0" y="0" class="{font.fa.fa} {font.fa.scale3x} {zcss.css.buttonZingable}">&#xf0e0;</text>
+               </g>
+               <g provider="phone">
+                  <text x="0" y="0" class="{font.fa.fa} {font.fa.scale5x} {zcss.css.buttonZingable} {zcss.css.backgroundPhone}">&#xf111;</text>
+                  <text x="0" y="0" class="{font.fa.fa} {font.fa.scale3x} {zcss.css.buttonZingable}">&#xf10b;</text>
+               </g>
+               <g provider="pinterest">
+                  <text x="0" y="0" class="{font.fa.fa} {font.fa.scale5x} {zcss.css.buttonZingable} {zcss.css.backgroundPinterest}">&#xf111;</text>
+                  <text x="0" y="0" class="{font.fa.fa} {font.fa.scale3x} {zcss.css.buttonZingable}">&#xf0d2;</text>
+               </g>
+               <g provider="skype">
+                  <text x="0" y="0" class="{font.fa.fa} {font.fa.scale5x} {zcss.css.buttonZingable} {zcss.css.backgroundSkype}">&#xf111;</text>
+                  <text x="0" y="0" class="{font.fa.fa} {font.fa.scale3x} {zcss.css.buttonZingable}">&#xf17e;</text>
+               </g>
+               <g provider="twitter">
+                  <text x="0" y="0" class="{font.fa.fa} {font.fa.scale5x} {zcss.css.buttonZingable} {zcss.css.backgroundTwitter}">&#xf111;</text>
+                  <text x="0" y="0" class="{font.fa.fa} {font.fa.scale3x} {zcss.css.buttonZingable}">&#xf099;</text>
+               </g>
+               <g provider="yahoo">
+                  <text x="0" y="0" class="{font.fa.fa} {font.fa.scale5x} {zcss.css.buttonZingable} {zcss.css.backgroundYahoo}">&#xf111;</text>
+                  <text x="0" y="0" class="{font.fa.fa} {font.fa.scale3x} {zcss.css.buttonZingable}">&#xf19e;</text>
+               </g>
+            </svg>
+            <div id="navigation" class="buttons">
+               <a id="back">
+                  <span class="{font.fa.fa} {font.fa.arrowLeft} {font.fa.large}"></span>
+               </a>
+               <a id="help">
+                  <span class="{font.fa.fa} {font.fa.question} {font.fa.large}"></span>
+               </a>
+            </div>
+         </g:HTMLPanel>
+      </mgwt:panel.Panel>
+   </mgwt:panel.flex.RootFlexPanel>
+</ui:UiBinder>

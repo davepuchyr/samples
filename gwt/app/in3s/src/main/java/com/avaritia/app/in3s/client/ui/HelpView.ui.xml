@@ -1,0 +1,28 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder
+    xmlns:ui="urn:ui:com.google.gwt.uibinder"
+    xmlns:g="urn:import:com.google.gwt.user.client.ui"
+    xmlns:mgwt="urn:import:com.googlecode.mgwt.ui.client.widget"
+    xmlns:alu="urn:import:com.avaritia.lib.ui.client.fontawesome.button"
+ >
+   <ui:with field="font" type="com.avaritia.lib.font.awesome.client.FontAwesomeBundle" />
+
+   <ui:style>
+      div .scrollPanel {
+         padding: 10px;
+      }
+   </ui:style>
+
+   <mgwt:panel.flex.RootFlexPanel>
+      <mgwt:panel.scroll.ScrollPanel ui:field="scrollPanel" styleName="height100percent" scrollingEnabledX="false" >
+         <mgwt:panel.Panel ui:field="panel" addStyleNames="{style.scrollPanel}" />
+      </mgwt:panel.scroll.ScrollPanel>
+      <g:HTMLPanel>
+         <div id="navigation" class="buttons">
+            <a id="back">
+               <span class="{font.fa.fa} {font.fa.arrowDown} {font.fa.large}"></span>
+            </a>
+         </div>
+      </g:HTMLPanel>
+   </mgwt:panel.flex.RootFlexPanel>
+</ui:UiBinder>
