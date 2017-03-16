@@ -21,5 +21,5 @@ if ( o instanceof A ) {
 
 - Server-side <a href=https://github.com/davepuchyr/samples/tree/master/server>Java</a> code and tests.
 
-- The basis for a framework of <a href="https://github.com/davepuchyr/samples/blob/master/c%2B%2B/lib-service">microservices</a> that are controlled by websockets and has a registry that uses shared memory.
+- The basis for a C++ framework of <a href="https://github.com/davepuchyr/samples/blob/master/c%2B%2B/lib-service">microservices</a> that are controlled by websockets using JSON messages and has a registry that uses shared memory.
 
