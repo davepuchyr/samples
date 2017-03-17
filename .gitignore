@@ -29,4 +29,5 @@ www-test/
 
 # dmjp
 build.gradle
+*.out
 
